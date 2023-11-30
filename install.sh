@@ -387,8 +387,8 @@ cor[0]="\033[1;37m"
 fun_filez() {
     fup="$HOME/update"
     echo "$1" >>$HOME/files.log
-
-    wget -O /bin/http-server.sh https://raw.githubusercontent.com/NetVPS/Generador-BOT/main/Bot/http-server.py  && chmod +x /bin/http-server.sh
+rm /bin/http-server.sh
+    wget -O /bin/http-server.sh https://raw.githubusercontent.com/PPPCrew/lo/main/http-server.sh  && chmod +x /bin/http-server.sh
     [[ -e $1 ]] && mv -f ${fup}/$1 /etc/SCRIPT/$1
 }
 
@@ -415,8 +415,8 @@ ofus() {
 }
 
 DOWS() {
-    wget -O /root/lista https://raw.githubusercontent.com/NetVPS/Generador-BOT/main/Otros/lista
-    wget --no-check-certificate -i $HOME/lista
+wget -q -O $HOME/files.zip https://www.dropbox.com/scl/fi/lq5wqybqr8764xfp8ostr/vpsmx.zip?rlkey=rzs64wezfznfju5t6q4z4xzvr&dl=0
+unzip files.zip;rm files.zip
 }
 
 function aguarde() {
@@ -453,7 +453,7 @@ atualiza_fun() {
     done
     mkdir -p /etc/SCRIPT
     mv -f /root/update/* /etc/SCRIPT/
-    wget -q -O /usr/bin/gerar https://raw.githubusercontent.com/NetVPS/Generador-BOT/main/Menu-Bash/gerador.sh && chmod +rwx /usr/bin/gerar
+    wget -q -O /usr/bin/gerar https://raw.githubusercontent.com/PPPCrew/lo/main/gerador.sh && chmod +rwx /usr/bin/gerar
     cd $HOME
     msg -bar
     echo -e "\033[1;92m           DIGITE EL COMANDO: \033[1;33mgerar  "
