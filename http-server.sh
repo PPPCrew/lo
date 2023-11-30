@@ -1,7 +1,7 @@
 #!/bin/bash
 IVAR="/etc/http-instas"
 onliCHECK=/var/www/html/ChumoGH
-LIST="$(echo "lista-arq-" | rev)"
+LIST="$(echo -e "lista-arq" | rev)"
 [[ -d /var/www/html/ChumoGH ]] || mkdir ${onliCHECK}
 install_fun () {
 apt-get install netcat -y
